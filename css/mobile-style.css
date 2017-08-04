@@ -1,0 +1,681 @@
+body {
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 16px;
+    min-height: 100vh;
+    font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #171717;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.strike,
+del {
+    text-decoration: line-through;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ol {
+    list-style-position: outside;
+    padding: 0 0 0 1.25rem;
+    margin: 0 0 1.25rem;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-family: 'Lora', Helvetica, Arial, serif;
+    margin: 0 0 1rem;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #171717;
+    text-transform: uppercase;
+    position: relative;
+    margin: 0 1rem 1.5rem;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.19;
+    font-family: 'Lora', Helvetica, Arial, serif;
+    padding: 0 1rem;
+}
+
+h5 {
+    font-weight: 400;
+    font-size: .75rem;
+    line-height: 1.17;
+    font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+p {
+    font-size: .875rem;
+    line-height: 1.71;
+    margin: 0 0 1rem;
+}
+
+.btn {
+    padding: 1rem 0;
+    background-color: #fff;
+    font-size: .75em;
+    line-height: .875rem;
+    font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+    border: 1px solid #999;
+    text-align: center;
+    text-transform: uppercase;
+    color: #171717;
+    border-radius: 2px;
+    display: block;
+    margin: 0 0 1rem;
+    text-decoration: none;
+}
+
+.btn-black {
+    background-color: #171717;
+    border-color: #171717;
+    color: #fff;
+}
+
+.btn-text {
+    font-size: .75rem;
+    line-height: 1rem;
+    font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: .5rem 0 0;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    padding: 0;
+    align-self: flex-start;
+}
+
+.dropdown {
+    border-top: 1px solid #c6c6c6;
+    display: flex;
+    flex-flow: column;
+}
+
+@media (min-width: 48rem) {
+    .dropdown {
+        border-top: none;
+    }
+}
+
+.dropdown + .dropdown {
+    border-bottom: 1px solid #c6c6c6;
+}
+
+@media (min-width: 48rem) {
+    .dropdown + .dropdown {
+        border-bottom: none;
+    }
+}
+
+.dropdown.is-active .dropdown-content {
+    display: block;
+}
+
+.dropdown.is-active .dropdown-button:after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.dropdown-button {
+    display: block;
+    background-color: transparent;
+    padding: 2rem 1rem;
+    border: none;
+    position: relative;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+@media (min-width: 48rem) {
+    .dropdown-button {
+        padding: 1.5rem .5rem 1rem;
+    }
+}
+
+.dropdown-button:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 5px 0;
+    border-color: #171717 transparent transparent;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 48rem) {
+    .dropdown-button:after {
+        display: none;
+    }
+}
+
+.dropdown-content {
+    display: none;
+    padding: 0 1rem 2rem;
+}
+
+@media (min-width: 48rem) {
+    .dropdown-content {
+        display: block;
+        padding: 0 .5rem 1.5rem;
+    }
+}
+
+.dropdown-content p {
+    font-size: .875rem;
+    line-height: 1.5rem;
+    font-family: 'Lora', Helvetica, Arial, serif;
+    margin-bottom: 0;
+}
+
+.dropdown-content p + ul {
+    margin-top: 1.5rem;
+}
+
+.dropdown-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content li {
+    font-size: .875rem;
+    line-height: 1.5rem;
+    font-family: 'Lora', Helvetica, Arial, serif;
+}
+
+.dropdown-content li:last-child {
+    margin-bottom: 0;
+}
+
+/* default styles end */
+
+/* header styles */
+
+.page-header {
+    border-bottom: 1px solid #c6c6c6;
+    padding: 1rem 0;
+}
+
+@media (min-width: 48rem) {
+    .page-header {
+        padding: 1.5rem;
+    }
+}
+
+.page-header-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-header-logo {
+    width: 138px;
+    height: 10px;
+}
+
+/* header styles end */
+
+/* page styles */
+
+.page-content {
+    padding-bottom: 4rem;
+}
+
+@media (min-width: 48rem) {
+    .page-content {
+        padding-bottom: 3.5rem;
+    }
+}
+
+/* page styles end */
+
+/* footer styles */
+
+.page-footer {
+    background-color: #f3f3f3;
+    padding: 2rem 1rem;
+}
+
+@media (min-width: 48rem) {
+    .page-footer {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+}
+
+@media (min-width: 48rem) {
+    .page-footer-btns {
+        display: flex;
+    }
+}
+
+.page-footer-btn {
+    display: block;
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    padding: 0;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+    border: none;
+}
+
+@media (min-width: 48rem) {
+    .page-footer-btn {
+        margin: 0 1.5rem 0 0;
+    }
+}
+
+.page-footer-help {
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.188rem;
+    margin: 1.5rem 0 1rem;
+    font-size: 1rem;
+}
+
+@media (min-width: 48rem) {
+    .page-footer-help {
+        display: none;
+    }
+}
+
+.page-footer-help-link {
+    color: #171717;
+    text-decoration: none;
+    text-align: center;
+    font-size: .875rem;
+    line-height: 1.063rem;
+    font-family: 'Lora', Helvetica, Arial, serif;
+    font-style: italic;
+    display: block;
+    padding: 0 1rem;
+}
+
+@media (min-width: 48rem) {
+    .page-footer-help-link {
+        display: none;
+    }
+}
+
+.page-footer-nav {
+    margin-bottom: 2rem;
+}
+
+.page-footer-nav-title {
+    font-weight: bold;
+    font-size: .75rem;
+    line-height: .875rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.page-footer-nav-item {
+    font-weight: 600;
+    font-size: .75rem;
+    line-height: 1rem;
+    margin-bottom: .75rem;
+}
+
+.page-footer-nav-item:last-child {
+    margin-bottom: 0;
+}
+
+.page-footer-nav-link {
+    color: #999;
+    text-decoration: none;
+}
+
+.product-title {
+    padding: 1rem;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-family: 'Lora', Helvetica, Arial, serif;
+    margin: 0;
+}
+
+@media (min-width: 48rem) {
+    .product-title {
+        padding: 1.5rem .5rem;
+        font-size: 1.5rem;
+        line-height: 1.813rem;
+    }
+}
+
+.product-gallery {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+    margin-right: -.5rem;
+    padding: 0;
+}
+
+@media (min-width: 48rem) {
+    .product-gallery {
+        margin-right: 0;
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+}
+
+.product-gallery-item {
+    flex-shrink: 0;
+}
+
+@media (min-width: 48rem) {
+    .product-gallery-item {
+    }
+}
+
+.product-gallery-photo {
+    object-fit: contain;
+    width: 300px;
+    height: 400px;
+}
+
+@media (min-width: 48rem) {
+    .product-gallery-photo {
+        width: 432px;
+        height: 576px;
+
+    }
+}
+
+.product-details {
+    margin-right: -.5rem;
+    padding: 0;
+}
+
+@media (min-width: 48rem) {
+    .product-details {
+        margin-right: 0;
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+}
+
+.product-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+@media (min-width: 48rem) {
+    .product-details-header {
+        padding: 0 0 1rem;
+    }
+}
+
+.product-details-price {
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.19;
+    padding: 0;
+    text-transform: none;
+    margin: 0;
+}
+
+.product-details-partnumber {
+    color: #171717;
+    font-size: .75rem;
+    line-height: 1.19;
+    margin: 0;
+}
+
+.product-colors-container {
+    border-bottom: 1px solid #c6c6c6;
+    padding-bottom: 2rem;
+    margin: 0 1rem 2rem;
+}
+
+@media (min-width: 48rem) {
+    .product-colors-container {
+        margin: 0 0 2rem;
+    }
+}
+
+.product-colors-choosen {
+    font-size: .75rem;
+    line-height: 1rem;
+}
+
+.product-colors {
+    display: flex;
+}
+
+.product-colors-button {
+    display: block;
+    height: 40px;
+    width: 40px;
+    margin-right: 1rem;
+    padding: 0;
+    text-indent: -9999px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    transition: border-color .25s ease-in-out;
+}
+
+.product-colors-button.is-active {
+    border-color: #232122;
+}
+
+.product-controls {
+    padding: 0 1rem 3rem;
+    display: flex;
+    flex-flow: column;
+}
+
+@media (min-width: 48rem) {
+    .product-controls {
+        padding: 0;
+    }
+}
+
+.deliverry-options {
+    margin-right: -.5rem;
+    padding: 0;
+}
+
+@media (min-width: 48rem) {
+    .deliverry-options {
+        margin-right: 0;
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+}
+
+.deliverry-options .dropdown-button {
+    border-bottom: 1px solid #c6c6c6;
+}
+
+@media (min-width: 48rem) {
+    .deliverry-options .dropdown-content {
+        padding: 0;
+    }
+
+    .deliverry-options .dropdown-button {
+        padding: 0 0 1rem;
+        border-bottom: none;
+    }
+
+    .deliverry-options h5 {
+        font-weight: bold;
+        font-size: .75rem;
+        line-height: .875rem;
+        font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+        margin: 0 0 .25rem;
+    }
+
+    .deliverry-options p {
+        font-size: .75rem;
+        line-height: 1rem;
+        font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.product-section {
+    padding-top: 3rem;
+}
+
+@media (min-width: 48rem) {
+    .product-section {
+        padding-top: 1.5rem;
+    }
+}
+
+.product-section-recommend .product-section-title {
+    margin-top: -1px;
+}
+
+.product-section-seo {
+    padding-top: 1rem;
+}
+
+.product-section-title {
+    display: inline-block;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #171717;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    font-family: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #171717;
+    text-transform: uppercase;
+    position: relative;
+    margin: 0 1rem 1.5rem;
+}
+
+@media (min-width: 48rem) {
+    .product-section-title {
+        margin: 0 .5rem 1rem;
+    }
+}
+
+.product-recomend-list {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 .125rem;
+}
+
+@media (min-width: 48rem) {
+    .product-recomend-list {
+        padding: 0;
+    }
+}
+
+.product-recomend-list-item {
+    flex-basis: calc(50% - 1.75rem);
+    margin: 0 .875rem 2rem;
+}
+
+@media (min-width: 48rem) {
+    .product-recomend-list-item {
+        flex-basis: calc(25% - 1rem);
+        margin: 0 .5rem .5rem;
+    }
+}
+
+.product-recomend-list-link {
+    color: #171717;
+    text-decoration: none;
+    display: block;
+}
+
+.product-recomend-list-img {
+    width: 130px;
+    height: 174px;
+    display: block;
+}
+
+@media (min-width: 48rem) {
+    .product-recomend-list-img {
+        width: 176px;
+        height: 235px;
+    }
+}
+
+.product-recomend-list-name {
+    padding: 0;
+    margin: .5rem 0;
+}
+
+.product-recomend-list-price {
+    color: #999;
+    margin: 0;
+    font-size: .75rem;
+    line-height: 1.17;
+}
+
+.help-links {
+    padding: 0 1rem;
+}
+
+.help-links-item {
+    font-size: .875rem;
+    line-height: 1.063rem;
+    font-family: 'Lora', Helvetica, Arial, serif;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.help-links-item:last-child {
+    margin-bottom: 0;
+}
+
+.help-links-link {
+    color: #171717;
+    text-decoration: none;
+}
